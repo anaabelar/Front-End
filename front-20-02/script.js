@@ -1,14 +1,23 @@
-function minhaFuncao() {
-    alert("Olá");
+//Criando as variáveis
+const nome = document.getElementById("nome");
+const cidade = document.getElementById("cidade");
+
+const resultado = document.getElementById("resultado");
+const resultadoCid = document.getElementById("resultadoCid");
+
+function limparCampos(){
+    nome.value = "";
+    cidade.value = "";
 }
 
-function minhaFuncao(nome, idade) {
-    console.log(nome + idade);
+//Criando função
+function mudar(event) {
+    event.preventDefault();
+
+    //Imprimir nome na tela
+    resultado.innerHTML = nome.value;
+    resultadoCid.innerHTML = cidade.value;
+
+    limparCampos();
+
 }
-
-//Chamando função
-dados("Ana", 37);
-dados("Carla" + 40);
-dados("Juliana" + 8);
-dados("Doris" + 13);
-
